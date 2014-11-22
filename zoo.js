@@ -22,17 +22,16 @@ var remove = function(x,y) {
 var swap = function(x,y,z) {
 	index_x = z.indexOf(x,0);
 	index_y = z.indexOf(y,0);
-	new_zoo = z;
-	new_zoo[index_x] = y;
-	new_zoo[index_y] = x;
-	return new_zoo;
+	new_z = z;
+	new_z[index_x] = y;
+	new_z[index_y] = x;
+	return new_z;
 }
 
-//sort
 
 
 
-var newZoo= add("kangaroo",zoo);
+var newZoo = add("kangaroo",zoo);
 var newZoo2 = remove("dodo",newZoo);
 var newZoo3 = swap("tiger","crawford",newZoo2);
 var newZoo4 = newZoo3.sort();
