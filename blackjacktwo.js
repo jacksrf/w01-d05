@@ -2,35 +2,6 @@ var suits = ["hearts","diamonds","clubs","spades"];
 var num = [2,3,4,5,6,7,8,9,10,"J","Q","K","A"]
 var deck = [];
 
-
-// var giveValue = function(x) {
-	 
-
-// if (x.charAt(0) === "J" || x.charAt(0) === "K" || x.charAt(0) === "Q") {
-// 		cardValue = "10";
-// 		// console.log(x);
-// 	} 
-// 	else if (x.charAt(0) === "1"){
-// 			cardValue = "10";
-// 			// console.log(x);
-// 	}
-// 	else if (x.charAt(0) === "A"){
-// 		cardValue = "1";
-// 		// console.log(x);
-// 	} 
-// 	else {
-// 		cardValue = x.charAt(0);
-// 		// console.log(x);
-// 	}
-// }
-
-// var handTotal = function(x) {
-// 		for (i = 0; i < x.length; i++ ){
-// 			var sum = 0;
-//     		sum += parseInt(x[i]);
-// 	}
-// }
-
 function shuffle() {
 	var m = deck.length, t, i;
 
@@ -64,19 +35,9 @@ for (i = 0; i < num.length; i++) {
 var newDeck = shuffle(deck);
 console.log(newDeck);
 console.log(newDeck.length);
-// console.log(newDeck);
+
 
 //dealing the cards and value
-// for (i=0; i< newDeck.length; i++){
-//   for (i=0; i<3; i++){
-//     var chosen = Math.floor(newDeck.length*Math.random());
-//     var deal = newDeck[chosen];
-//     console.log(deal);
-//     handValue += giveValue(deal);
-//     newDeck.splice(chosen, 1);
-// 	}
-	// console.log(handTotal(handValue));
-// }
 
 for (i= -13; i < newDeck.length; i++) {
 
@@ -91,19 +52,15 @@ for (i= -13; i < newDeck.length; i++) {
 
 	if (card1.charAt(0) === "J" || card1.charAt(0) === "K" || card1.charAt(0) === "Q") {
 			cardValue1 = parseInt(10);
-			// console.log(card1);
 		} 
 		else if (card1.charAt(0) === "1"){
 			cardValue1 = parseInt(10);
-			// console.log(card1);
 		}
 		else if (card1.charAt(0) === "A"){
 			cardValue1 = parseInt(1);
-			// console.log(card1);
 		} 
 		else {
 			cardValue1 = parseInt(card1.charAt(0));
-			// console.log(card1);
 		}
 
 	if (card2.charAt(0) === "J" || card2.charAt(0) === "K" || card2.charAt(0) === "Q") {
@@ -145,7 +102,7 @@ for (i= -13; i < newDeck.length; i++) {
 		else {
 			console.log("HIT, STAY, or SURRENDER")
 		}
-		
+
 	if (deck.length === 1 ) {
 		console.log("-----------TIME TO SHUFFLE-------------");
 	}
