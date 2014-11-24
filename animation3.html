@@ -1,0 +1,271 @@
+<html>
+<body>
+<canvas id="the_canvas" width="1100" height="1000"></canvas>
+<script>
+  var canvas = document.getElementById('the_canvas');
+  var ctx = canvas.getContext('2d');
+  // var moveRight = true;
+  // var handleKeyDown = function(evt) {
+  //   if (evt.keyCode === 37) {
+  //     //Left arrow was pressed
+  //     moveRight = false;
+  //   } else if (evt.keyCode === 39) {
+  //     //Left arrow was pressed
+  //     moveRight = true;
+  //   }
+  // }
+  //don't worry about what window is,
+  //just realize that we are telling
+  //the browser to call our handleKeyDown
+  //function defined above when a user
+  //presses a key
+  // window.addEventListener('keydown',handleKeyDown,true);
+  // var x = 0;
+  
+  // var draw = function() {
+  //   //clear background
+  //   ctx.fillStyle = "white";
+  //   ctx.fillRect(0,0, canvas.width, canvas.height);
+  //   if (moveRight === true) {
+  //     //move the square to the right
+  //     x = x + 1;
+  //   } else {
+  //     //move the square to the left
+  //     x = x - 1;
+  //   }
+  //   //make sure it doesn't go off the screen though
+  //   if (x > canvas.width) {
+  //     x %= canvas.width;
+  //     x = 0;
+  //   }
+  //  } 
+  ctx.beginPath();
+  ctx.rect(0,0,1100,900);
+  ctx.stroke();
+  ctx.fillStyle="#004CB3";
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.fillRect (200, 450, 50, 0,Math.PI*2,false);
+  ctx.stroke();
+  ctx.fillStyle = "yellow";
+  ctx.fill();
+
+  // var grd = context.createLinearGradient(0,0,canvas.width,900);
+
+  // grd.addColorStop(0,"#8ED6FF");
+  // grd.addColorStop(1,"#004CB3");
+  //     context.fillStyle = grd;
+  //     context.fill();
+
+ //SKYLINE 
+  
+  ctx.beginPath(0,900);
+  // ctx.arc(165,150,20,0,Math.PI,true); //body
+  ctx.lineTo(0,900);
+  ctx.lineTo(40,900);
+  ctx.lineTo(40,700);
+  ctx.lineTo(70,700);
+  ctx.lineTo(70,850);
+  ctx.lineTo(80,850);
+  ctx.lineTo(80,750);
+  ctx.lineTo(100,750);
+  ctx.lineTo(100,875);
+
+  //chrysler buiding
+  ctx.lineTo(110,875);
+  ctx.lineTo(110,675);
+  ctx.lineTo(115,675);
+  ctx.lineTo(115,670);
+  ctx.lineTo(120,670);
+  ctx.lineTo(120,640);
+  ctx.lineTo(125,640);
+  ctx.lineTo(135,600);
+  ctx.lineTo(135,575);
+  ctx.lineTo(135,600);
+  ctx.lineTo(145,640);
+  ctx.lineTo(150,640);
+  ctx.lineTo(150,670);
+  ctx.lineTo(155,670);
+  ctx.lineTo(155,675);
+  ctx.lineTo(160,675);
+  ctx.lineTo(160,875);
+
+  //-------------------
+
+  ctx.lineTo(160,900);
+  ctx.lineTo(180,900);
+  ctx.lineTo(180,750);
+  ctx.lineTo(200,750);
+  ctx.lineTo(200,700);
+  ctx.lineTo(230,700);
+  ctx.lineTo(230,850);
+  ctx.lineTo(240,850);
+  ctx.lineTo(240,750);
+  ctx.lineTo(260,750);
+  ctx.lineTo(260,875);
+  ctx.lineTo(270,875);
+  ctx.lineTo(270,800);
+  ctx.lineTo(290,800);
+  ctx.lineTo(290,900);
+  ctx.lineTo(300,900);
+  ctx.lineTo(300,750);
+  ctx.lineTo(320,750);
+  ctx.lineTo(320,900);
+  ctx.lineTo(330,900);
+
+  //------------------------
+  
+  //EMPIRE STATE BUILDING
+  ctx.lineTo(330,800);
+  ctx.lineTo(335,800);
+  ctx.lineTo(335,780);
+  ctx.lineTo(340,780);
+  ctx.lineTo(340,580);
+  ctx.lineTo(342,580);
+  ctx.lineTo(342,560);
+  ctx.lineTo(347,560);
+  ctx.lineTo(347,550);
+  ctx.lineTo(352,550);
+  ctx.lineTo(352,540);
+  ctx.lineTo(355,540);
+  ctx.lineTo(355,535);
+  ctx.lineTo(365,535);
+  ctx.lineTo(367,500);
+  ctx.lineTo(370,497);
+  ctx.lineTo(370,460);
+  ctx.lineTo(370,497);
+  ctx.lineTo(373,500);
+  ctx.lineTo(375,535);
+  ctx.lineTo(385,535);
+  ctx.lineTo(385,540);
+  ctx.lineTo(388,540);
+  ctx.lineTo(388,550);
+  ctx.lineTo(393,550);
+  ctx.lineTo(393,560);
+  ctx.lineTo(398,560);
+  ctx.lineTo(398,580);
+  ctx.lineTo(400,580);
+  ctx.lineTo(400,780);
+  ctx.lineTo(405,780);
+  ctx.lineTo(405,800);
+  ctx.lineTo(410,800);
+  ctx.lineTo(410,900);
+
+  ctx.lineTo(420,900);
+  ctx.lineTo(440,900);
+  ctx.lineTo(440,750);
+  ctx.lineTo(460,750);
+  ctx.lineTo(460,700);
+  ctx.lineTo(490,700);
+  ctx.lineTo(490,850);
+  ctx.lineTo(500,850);
+  ctx.lineTo(500,750);
+  ctx.lineTo(520,750);
+  ctx.lineTo(520,875);
+  ctx.lineTo(530,875);
+  ctx.lineTo(530,800);
+  ctx.lineTo(550,800);
+  ctx.lineTo(550,900);
+  ctx.lineTo(560,900);
+  ctx.lineTo(560,750);
+  ctx.lineTo(580,750);
+  ctx.lineTo(580,900);
+  ctx.lineTo(590,900);
+  ctx.lineTo(600,900);
+  ctx.lineTo(600,800);
+  ctx.lineTo(700,800);
+  ctx.lineTo(700,825);
+  ctx.lineTo(750,825);
+  ctx.lineTo(750,900);
+  ctx.lineTo(760,900);
+
+  //WORLD TRADE ONE
+  ctx.lineTo(770,560);
+  ctx.lineTo(787,550);
+  ctx.lineTo(827,555);
+  ctx.lineTo(840,900);
+
+  //TRIANGLE TOWER
+  ctx.lineTo(850,900);
+  ctx.lineTo(850,700);
+  ctx.lineTo(885,740);
+  ctx.lineTo(920,700);
+  ctx.lineTo(920,900);
+
+  //CROSSES TOWER
+  ctx.lineTo(940,900);
+  ctx.lineTo(940,650);
+  ctx.lineTo(940,675);
+  ctx.lineTo(965,675);
+
+  ctx.lineTo(965,675);
+  ctx.lineTo(965,675);
+  ctx.lineTo(965,650);
+  ctx.lineTo(965,900);
+  ctx.lineTo(0,900);
+  ctx.stroke();
+  ctx.fillStyle = "black";
+  ctx.fill();
+
+
+  //CROSSES ON THE CROSSES TOWER
+  ctx.strokeStyle = "white";
+  ctx.beginPath();
+  ctx.lineTo(940,675);
+  ctx.lineTo(965,725);
+  ctx.lineTo(940,775);
+  ctx.lineTo(965,825);
+  ctx.lineTo(940,875);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.lineTo(965,675);
+  ctx.lineTo(940,725);
+  ctx.lineTo(965,775);
+  ctx.lineTo(940,825);
+  ctx.lineTo(965,875);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.lineTo(760,900);
+  ctx.lineTo(787,550);
+  ctx.lineTo(787,550);
+  ctx.lineTo(804,900);
+  ctx.lineTo(827,555);
+  // ctx.lineTo(965,555);
+  // ctx.lineTo(965,555);
+
+  ctx.stroke();
+
+  //TOP OF WTO
+  ctx.beginPath();
+  ctx.lineTo(787,550);
+  ctx.lineTo(778.5,555);
+  ctx.lineTo(769,547);
+  ctx.lineTo(787,540);
+  ctx.lineTo(790,450);
+  ctx.lineTo(797,450);
+  ctx.lineTo(797,540);
+  ctx.lineTo(823,544);
+  ctx.lineTo(810,553);
+  ctx.lineTo(787,550);
+
+  ctx.stroke();
+
+  
+
+  // ctx.lineTo();
+  // ctx.arc(130,640,10,0,Math.PI,true);
+  // ctx.stroke();
+
+  
+
+
+
+
+
+  setInterval(draw, 20);
+</script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<html>
+<body>
+<canvas id="the_canvas" width="400" height="400"></canvas>
+<script>
+  var canvas = document.getElementById('the_canvas');
+  var ctx = canvas.getContext('2d');
+  var moveRight = true;
+  var handleKeyDown = function(evt) {
+    if (evt.keyCode === 37) {
+      //Left arrow was pressed
+      moveRight = false;
+    } else if (evt.keyCode === 39) {
+      //Left arrow was pressed
+      moveRight = true;
+    }
+  }
+  //don't worry about what window is,
+  //just realize that we are telling
+  //the browser to call our handleKeyDown
+  //function defined above when a user
+  //presses a key
+  window.addEventListener('keydown',handleKeyDown,true);
+  var x = 0;
+  
+  var draw = function() {
+    //clear background
+    ctx.fillStyle = "gray";
+    ctx.fillRect(0,0, canvas.width, canvas.height);
+    if (moveRight === true) {
+      //move the square to the right
+      x = x + 1;
+    } else {
+      //move the square to the left
+      x = x - 1;
+    }
+    //make sure it doesn't go off the screen though
+    if (x > canvas.width) {
+      x %= canvas.width;
+      x = 0;
+    }
+    ctx.fillStyle = "purple";
+    ctx.fillRect (x - 350, 0, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect (x - 350, 50, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect (x - 350, 100, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect (x - 350, 150, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect (x - 350, 200, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect (x - 350, 250, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect (x - 350, 300, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect (x - 350, 350, 50, 50);
+
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x - 300), 0, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x - 300), 50, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x - 300), 100, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x - 300), 150, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x - 300), 200, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x - 300), 250, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x - 300), 300, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x - 300), 350, 50, 50);
+
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x - 250), 0, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x - 250), 50, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x - 250), 100, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x - 250), 150, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x - 250), 200, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x - 250), 250, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x - 250), 300, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x - 250), 350, 50, 50);
+
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x - 200), 0, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x - 200), 50, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x - 200), 100, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x - 200), 150, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x - 200), 200, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x - 200), 250, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x - 200), 300, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x - 200), 350, 50, 50);
+
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x - 150), 0, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x - 150), 50, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x - 150), 100, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x - 150), 150, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x - 150), 200, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x - 150), 250, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x - 150), 300, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x - 150), 350, 50, 50);
+
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x - 100), 0, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x - 100), 50, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x - 100), 100, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x - 100), 150, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x - 100), 200, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x - 100), 250, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x - 100), 300, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x - 100), 350, 50, 50);
+
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x - 50), 0, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x - 50), 50, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x - 50), 100, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x - 50), 150, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x - 50), 200, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x - 50), 250, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x - 50), 300, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x - 50), 350, 50, 50);
+
+    ctx.fillStyle = "brown";
+    ctx.fillRect (x, 0, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect (x, 50, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect (x, 100, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect (x, 150, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect (x, 200, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect (x, 250, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect (x, 300, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect (x, 350, 50, 50);
+
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x + 50), 0, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x + 50), 50, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x + 50), 100, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x + 50), 150, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x + 50), 200, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x + 50), 250, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x + 50), 300, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x + 50), 350, 50, 50);
+
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x + 100), 0, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x + 100), 50, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x + 100), 100, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x + 100), 150, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x + 100), 200, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x + 100), 250, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x + 100), 300, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x + 100), 350, 50, 50);
+
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x + 150), 0, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x + 150), 50, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x + 150), 100, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x + 150), 150, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x + 150), 200, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x + 150), 250, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x + 150), 300, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x + 150), 350, 50, 50);
+
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x + 200), 0, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x + 200), 50, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x + 200), 100, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x + 200), 150, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x + 200), 200, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x + 200), 250, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x + 200), 300, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x + 200), 350, 50, 50);
+
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x + 250), 0, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x + 250), 50, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x + 250), 100, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x + 250), 150, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x + 250), 200, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x + 250), 250, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x + 250), 300, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x + 250), 350, 50, 50);
+
+    ctx.fillStyle = "yellow";
+    ctx.fillRect ((x + 300), 0, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect ((x + 300), 50, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect ((x + 300), 100, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect ((x + 300), 150, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect ((x + 300), 200, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect ((x + 300), 250, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect ((x + 300), 300, 50, 50);
+    ctx.fillStyle = "purple";
+    ctx.fillRect ((x + 300), 350, 50, 50);
+
+    ctx.fillStyle = "purple";
+    ctx.fillRect (x + 350, 0, 50, 50);
+    ctx.fillStyle = "yellow";
+    ctx.fillRect (x + 350, 50, 50, 50);
+    ctx.fillStyle = "orange";
+    ctx.fillRect (x + 350, 100, 50, 50);
+    ctx.fillStyle = "green";
+    ctx.fillRect (x + 350, 150, 50, 50);
+    ctx.fillStyle = "blue";
+    ctx.fillRect (x + 350, 200, 50, 50);
+    ctx.fillStyle = "red";
+    ctx.fillRect (x + 350, 250, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.fillRect (x + 350, 300, 50, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect (x + 350, 350, 50, 50);
+
+
+
+  }
+  setInterval(draw, 20);
+</script>
+</body>
+</html>
